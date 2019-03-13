@@ -1,0 +1,25 @@
+<app-modal-window #modalDialog
+                  [showModal]="showModal"
+                  [headerMessage]="edit ? 'noteModal.titleEdit' : 'noteModal.headerTitle'"
+                  (modalWindowClose)="onNoteClose()"
+>
+  <div class="note-wrapper">
+    <form [formGroup]="noteForm" (submit)="noteSubmit()">
+      <div class="form-group">
+        <label for="title" [translate]="'noteModal.title'"></label>
+        <input formControlName="title"
+               type="text"
+               class="form-control"
+               id="title"
+               [placeholder]="'noteModal.titlePlaceholder' | translate">
+      </div>
+      <div class="form-group" *ngIf="edit">
+        <div class="form-check">
+          <input class="form-check-input" formControlName="finished" type="checkbox" value="" id="finishedCheckboc">
+          <label class="form-check-label" for="finishedCheckboc" [translate]="'noteModal.finished'"></label>
+        </div>
+      </div>
+      <button [disabled]="noteForm.invalid" class="btn btn-primary" [translate]="'noteModal.save'"></button>
+    </form>
+  </div>
+</app-modal-window>

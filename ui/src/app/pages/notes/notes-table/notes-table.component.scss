@@ -1,0 +1,17 @@
+.table-row {
+  -webkit-transition: background-color .1s;
+  transition: background-color .1s;
+}
+
+.table-row:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: #C90142;
+}
+
+.spinner-wrapper {
+  padding: 0 !important;
+}

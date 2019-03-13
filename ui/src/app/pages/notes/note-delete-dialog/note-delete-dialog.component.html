@@ -1,0 +1,10 @@
+<app-modal-window
+  [showConfirmation]="true"
+  (modalWindowConfirmation)="onModalConfirmation($event)"
+  [headerMessage]="'notesTableDialog.title'" #deleteDialog>
+  <div class="delete-dialog" *ngIf="noteToDelete">
+    <p [translate]="'notesTableDialog.message'"></p>
+    <p class="font-weight-bold">{{noteToDelete.title}}</p>
+  </div>
+</app-modal-window>
+

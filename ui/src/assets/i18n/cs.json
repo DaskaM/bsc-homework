@@ -1,0 +1,56 @@
+{
+  "settings" : {
+    "changeLanguage": "Změna jazyka"
+  },
+  "modalWindow" : {
+    "defaultTitle": "Vyžadovaná akce",
+    "yesButton": "Ano",
+    "noButton": "Ne"
+  },
+  "spinner": {
+    "text" : "Načítám data"
+  },
+  "menu" : {
+    "notes": "Poznámky",
+    "addNote": "Přidat Poznámku"
+  },
+  "notFound" : {
+    "notFoundMessage" : "Omlouváme se, požadovaná stránka neexistuje"
+  },
+  "noteList": {
+    "createNote": "Nová poznámka"
+  },
+  "noteModal": {
+    "headerTitle": "Nová poznámka",
+    "title": "Nazev",
+    "finished": "Dokončeno",
+    "titleEdit": "Editace poznámky",
+    "titlePlaceholder": "Nazev poznámky",
+    "save": "Uložit"
+  },
+  "noteStatus": {
+    "finished": "Úkol byl úspěšně dokončen",
+    "notFinished": "Úkol není dokončen"
+  },
+  "notesTable" : {
+    "title": "Název",
+    "finished": "Dokončeno",
+    "created": "Vytvořeno",
+    "lastUpdated": "Aktualizováno",
+    "deleteNote" : "Smazat"
+  },
+  "notesTableDialog": {
+    "title" : "Smazat poznámku",
+    "message": "Opravdu si přejete smazat nasledující poznámku?"
+  },
+  "noteDetail": {
+    "back": "Zpět",
+    "editNote": "Upravit poznámku",
+    "deleteNote": "Smazat poznámku",
+    "title": "Název poznámky",
+    "finished": "Dokončeno",
+    "created": "Vytvořeno",
+    "lastUpdated": "Aktualizováno",
+    "finish" : "Dokončit poznámku"
+  }
+}

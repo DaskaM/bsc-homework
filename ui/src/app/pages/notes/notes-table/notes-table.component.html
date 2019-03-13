@@ -1,0 +1,48 @@
+<div class="table-wrapper">
+  <table class="table" #table>
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" [translate]="'notesTable.title'"></th>
+      <th scope="col" [translate]="'notesTable.finished'"></th>
+      <th scope="col" [translate]="'notesTable.created'">Created</th>
+      <th scope="col" [translate]="'notesTable.lastUpdated'">Last Updated</th>
+      <th scope="col" [translate]="'notesTable.deleteNote'"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngIf="notes; else loadData">
+      <tr
+        class="table-row"
+        *ngFor="let note of notes; index as i"
+        (click)="onRowClick(note)"
+      >
+        <th scope="row">{{i + 1}}</th>
+        <td>{{note.title}}</td>
+        <td>
+          <fa-icon
+            [title]="noteService.getFinishedStatusTitle(note.finished) | async"
+            [icon]="getFinishedStatus(note.finished)"
+            [ngClass]="{'finished-task' : note.finished}"></fa-icon>
+        </td>
+        <td>{{note.created | date:'short'}}</td>
+        <td>{{note.lastUpdated | date:'short'}}</td>
+        <td class="text-center" (click)="deleteNote($event, note)">
+          <fa-icon class="delete-icon" [icon]="binIcon"></fa-icon>
+        </td>
+      </tr>
+    </ng-container>
+    <ng-template #loadData>
+      <tr>
+        <td class="spinner-wrapper" [colSpan]="table.rows[0].cells.length">
+          <app-spinner></app-spinner>
+        </td>
+      </tr>
+    </ng-template>
+    </tbody>
+  </table>
+</div>
+
+<app-note-delete-dialog #deleteDialog
+                        [noteToDelete]="noteToDelete">
+</app-note-delete-dialog>

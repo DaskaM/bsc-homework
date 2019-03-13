@@ -1,0 +1,66 @@
+<div class="note-detail-wrapper" *ngIf="selectedNote">
+  <div class="note-detail-header">
+    <div class="note-back">
+      <a [routerLink]="['/']">
+        <fa-icon class="back-icon" [icon]="backIcon"></fa-icon>
+        <span [translate]="'noteDetail.back'"></span>
+      </a>
+    </div>
+    <div class="note-action-buttons">
+      <button type="button"
+              class="btn btn-light"
+              (click)="deleteNote()">
+        <fa-icon [icon]="deleteIcon"></fa-icon>
+        <span [translate]="'noteDetail.deleteNote'"></span>
+      </button>
+      <button type="button"
+              class="btn btn-light"
+              (click)="editNote()">
+        <fa-icon [icon]="editIcon"></fa-icon>
+        <span [translate]="'noteDetail.editNote'"></span>
+      </button>
+    </div>
+  </div>
+  <div class="note-detail">
+    <table class="table table-borderless detail-table">
+      <tr>
+        <th scope="col" class="detail-title"><span [translate]="'noteDetail.title'"></span></th>
+        <td scope="col">{{selectedNote.title}}</td>
+      </tr>
+      <tr>
+        <th scope="col" class="detail-title">
+          <span [translate]="'noteDetail.finished'"></span>
+        </th>
+        <td>
+          <fa-icon class="detail-icon"
+                   [ngClass]="{'finished-task' : selectedNote.finished}"
+                   [icon]="getFinishedStatus(selectedNote.finished)">
+          </fa-icon>
+          <span>{{noteService.getFinishedStatusTitle(selectedNote.finished) | async}}</span>
+        </td>
+      </tr>
+      <tr>
+        <th scope="col" class="detail-title">
+          <span [translate]="'noteDetail.created'"></span>
+        </th>
+        <td>{{selectedNote.created | date : 'short'}}</td>
+      </tr>
+      <tr>
+        <th scope="col" class="detail-title">
+          <span [translate]="'noteDetail.lastUpdated'"></span>
+        </th>
+        <td>{{selectedNote.lastUpdated | date : 'short'}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+<app-note-delete-dialog #deleteDialog
+                        [noteToDelete]="selectedNote"
+                        (onDeleteConfirmation)="onDeleteConfirmation($event)">
+
+</app-note-delete-dialog>
+
+<app-note-modal (onConfirmation)="onConfirmation($event)" #noteModal>
+</app-note-modal>

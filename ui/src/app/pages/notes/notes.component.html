@@ -1,0 +1,10 @@
+<div class="notes-wrapper">
+  <button type="button"
+          class="btn btn-outline-primary add-button"
+          (click)="createNote()"
+          [translate]="'noteList.createNote'"></button>
+  <app-notes-table></app-notes-table>
+</div>
+
+<app-note-modal #noteModal>
+</app-note-modal>

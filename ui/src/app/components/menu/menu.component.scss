@@ -1,0 +1,31 @@
+@import "../../../styles";
+
+.logo {
+  min-width: 50px;
+  background: url("/assets/images/logo.svg") no-repeat;
+}
+
+.menu-wrapper {
+  -webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,0.22);
+  -moz-box-shadow: 0 1px 0 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 0 0 rgba(0,0,0,0.22);
+}
+
+.dropdown-menu {
+  margin-top: 0.55rem;
+  display: inline;
+  left: auto;
+}
+
+.dropdown-button {
+  color: $primary-link-color;
+  cursor: pointer;
+}
+
+.dropdown-item.active {
+  color: #FFFFFF;
+}
+
+.dropdown-button.active:hover {
+  color: red !important;
+}

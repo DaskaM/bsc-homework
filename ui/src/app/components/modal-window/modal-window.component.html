@@ -1,0 +1,30 @@
+<div class="modal-wrapper" *ngIf="showModal">
+  <div class="wrapper">
+    <div class="modal">
+      <div class="header" [style.backgroundColor]="headerColor">
+        <span [translate]="headerMessage"></span>
+        <div id="close" (click)="closeModal()">
+          <fa-icon [icon]="closeIcon"></fa-icon>
+        </div>
+      </div>
+      <div class="content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+    <div class="buttons-wrapper" *ngIf="showConfirmation">
+      <div class="confirmation-button">
+        <button (click)="closeModal()"
+                type="button"
+                class="btn btn-primary"
+                [translate]="'modalWindow.noButton'"></button>
+      </div>
+      <div class="confirmation-button">
+        <button (click)="confirmModal()"
+                type="button"
+                class="btn btn-primary"
+                [translate]="'modalWindow.yesButton'"></button>
+      </div>
+    </div>
+  </div>
+</div>
+

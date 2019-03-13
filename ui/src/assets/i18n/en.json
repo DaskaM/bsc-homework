@@ -1,0 +1,57 @@
+{
+  "settings": {
+    "changeLanguage": "Change language"
+  },
+  "spinner": {
+    "text" : "Retrieving data"
+  },
+  "modalWindow" : {
+    "defaultTitle": "Action required",
+    "yesButton": "Yes",
+    "noButton": "No"
+  },
+  "menu": {
+    "notes": "Notes",
+    "addNote": "Add Note",
+    "changeLanguage": "Change Language"
+  },
+  "notFound": {
+    "notFoundMessage": "Sorry, page not found"
+  },
+  "noteList": {
+    "createNote": "Create note"
+  },
+  "noteModal": {
+    "headerTitle": "New note",
+    "title": "Title",
+    "finished": "Finished",
+    "titleEdit": "Edit note",
+    "titlePlaceholder": "Enter title",
+    "save": "Save"
+  },
+  "noteStatus": {
+    "finished": "Task has been successfully finished",
+    "notFinished": "Task hasn't been finished"
+  },
+  "notesTable": {
+    "title": "Title",
+    "finished": "Finished",
+    "created": "Created",
+    "lastUpdated": "Updated",
+    "deleteNote" : "Deleted"
+  },
+  "notesTableDialog": {
+    "title" : "Delete note",
+    "message": "Do you really want to delete the following note?"
+  },
+  "noteDetail": {
+    "back": "Back",
+    "editNote": "Edit note",
+    "deleteNote": "Delete note",
+    "title": "Note title",
+    "finished": "Finished",
+    "created": "Created",
+    "lastUpdated": "Updated",
+    "finish" : "Finish note"
+  }
+}

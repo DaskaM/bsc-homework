@@ -1,0 +1,45 @@
+.back-icon {
+  margin-right: 0.5rem;
+}
+
+.note-detail {
+  position: relative;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.22);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.22);
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.22);
+  padding: 20px 15px;
+}
+
+.detail-title {
+  width: 25%;
+  text-transform: uppercase;
+}
+
+.detail-title:after {
+  content: ":";
+}
+
+.detail-icon {
+  margin-right: 0.2rem;
+}
+
+.note-detail-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.note-action-buttons {
+  button {
+    margin-left: 0.5rem;
+
+    span {
+      margin-left: 5px;
+    }
+  }
+}
+
+.note-value-wrapper {
+  margin-top: 3rem;
+}
